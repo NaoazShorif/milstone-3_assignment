@@ -66,6 +66,6 @@ function tinyFriend (names){
 }
 
 // testing tinyFriend function;
-let friends = ["rahim", "jabbar","picchi", "abul","sabbir",];
+let friends = ["Rahim", "Jabbar","Picchi", "Abul","Sabbir"];
 let result = tinyFriend(friends);
 console.log(result);
