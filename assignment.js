@@ -7,7 +7,7 @@ function feetToMile( feet ){
       return "WARNING: Please enter a valid or positive value.";
     }
 }
-//testing the feetToMile function.
+//testing the feetToMile function;
 let resultInMile = feetToMile(120);
 console.log (resultInMile);
 
@@ -21,21 +21,32 @@ function woodCalculator(chair, table , bed){
         return "You need to buy " + totalNeedOfWood + " cubic feet wood.";
     }
 }
-//testing the woodCalculator function.
+//testing the woodCalculator function;
 let totalWoodResult = woodCalculator(1, 1, 1);
 console.log(totalWoodResult);
 
 //3rd problem: Calculating brick for your building.
-// function brickCalculator (tala){
-//     if( tala < 0){
-//         return "WARNING: Building can't contain negetive value.";
-//     }else if (tala >= 0 && tala <= 10){
-//         let bricks = tala * 15 * 1000;
-//         return bricks;
-//     }else if ()
-// }
-
-// console.log(brickCalculator (10));
+ function brickCalculator (tala){
+     let totalBricks, smallerFloorBricks , middleFloorBricks , biggerFloorBricks;
+     if( tala <= 0){
+         return "WARNING: Floor amount can't be negative.";
+     }else if (tala > 0 && tala <= 10){
+          totalBricks = tala * 15 * 1000;
+     }else if (tala > 10 && tala <= 20){
+         middleFloorBricks = (tala - 10) * 12 * 1000;
+         biggerFloorBricks = 10 * 15 * 1000;
+         totalBricks =  middleFloorBricks + biggerFloorBricks;
+     }else {
+         smallerFloorBricks = (tala-20) * 10 * 1000;
+         middleFloorBricks = 10 * 12 * 1000;
+         biggerFloorBricks = 10 * 15 * 1000;
+         totalBricks = smallerFloorBricks + middleFloorBricks + biggerFloorBricks;
+     }
+     return "Total brick amount is = " + totalBricks;
+ }
+// testing brickCalculator function;
+    let totalBrickResult = brickCalculator(27);
+    console.log(totalBrickResult);
 
 
 
@@ -54,7 +65,7 @@ function tinyFriend (names){
         return tinyName; 
 }
 
-// testing 4th problem or tinyFriend function;
-let friends = ["rahim", "jabbar","picchi", "abul","sabbir"];
+// testing tinyFriend function;
+let friends = ["rahim", "jabbar","picchi", "abul","sabbir",];
 let result = tinyFriend(friends);
 console.log(result);
